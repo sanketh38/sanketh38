@@ -1,15 +1,15 @@
 class removeelement{
-public int removeDuplicates(int[] nums) {
+public int removeElement(int[] nums, int val) {
         int x = 0;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]!=nums[x]){
-                x++;
-                int a=nums[i];
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                int a =nums[i];
                 nums[i]=nums[x];
                 nums[x]=a;
+                x++;
             }
         }
-        return x+1;
+        return x;
     }
 }
 
